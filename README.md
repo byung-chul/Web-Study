@@ -7,6 +7,7 @@ https://byung-chul.github.io/Web-Study/
 
 * Web
 * HTML
+* CSS
 
 Commit Message 작성 방법
 * [New/Edit/Docs] 제목
