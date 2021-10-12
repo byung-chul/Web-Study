@@ -4,7 +4,7 @@
 <head>
     <title>WEB1 - CSS</title>
     <meta charset="utf-8">
-    
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-SZ0JEVCJN7"></script>
     <script>
@@ -14,13 +14,33 @@
 
         gtag('config', 'G-SZ0JEVCJN7');
     </script>
+    <style>
+        /*기본적인 a tag의 font Color를 지정*/
+        a {
+            color:rgb(65, 220, 225);
+        }
+        /*Title처럼 나타내는 a tag는 text decoration이 안되도록 지정*/
+        #title {
+            text-decoration: none;
+        }
+        /*tag의 size를 늘리고, 중앙정렬, bottom margin 0*/
+        #titleH1 {
+            text-align: center;
+            margin-bottom: 0px;
+            font-size: 70px;
+        }
+        /*h1 tag의 size를 늘리고, 중앙정렬, bottom margin 0*/
+        #active {
+            color:rgb(247, 4, 247)
+        }
+    </style>
 </head>
 
 <body>
-    <h1><a href="../index.html">WEB</a></h1>
+    <h1 id="titleH1"><a href="../index.html" id="title">WEB</a></h1>
     <ol>
         <li><a href="html_page.html">HTML</a></li>
-        <li><a href="css_page.html">CSS</a></li>
+        <li><a href="css_page.html" id="active">CSS</a></li>
         <li><a href="javascript_page.html">JavaScript</a></li>
     </ol>
 
@@ -80,7 +100,7 @@
             (d.head || d.body).appendChild(s);
         })();
     </script>
-    <noscript>Please enable JavaScript to view the 
+    <noscript>Please enable JavaScript to view the
         <a href="https://disqus.com/?ref_noscript">comments powered by
             Disqus.
         </a>
