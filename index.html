@@ -15,29 +15,28 @@
         gtag('config', 'G-SZ0JEVCJN7');
     </script>
     <style>
+        /*기본적인 a tag의 font Color를 지정*/
         a {
-            color:royalblue;
+            color:rgb(65, 220, 225);
+        }
+        /*Title처럼 나타내는 a tag는 text decoration이 안되도록 지정*/
+        #active {
             text-decoration: none;
         }
-        .saw {
-            color:gray;
-        }
-        #active {
-            color:red;
-        }
-        h1 {
-            font-size: 70px;
-            margin-bottom: 0px;
+        /*tag의 size를 늘리고, 중앙정렬, bottom margin 0*/
+        #titleH1 {
             text-align: center;
+            margin-bottom: 0px;
+            font-size: 70px;
         }
     </style>
 </head>
 
 <body>
-    <h1><a href="index.html">WEB</a></h1>
+    <h1 id="titleH1"><a href="index.html" id="active">WEB</a></h1>
     <ol>
-        <li><a href="IntroductionOfWeb/html_page.html" class="saw">HTML</a></li>
-        <li><a href="IntroductionOfWeb/css_page.html" class="saw" id="active">CSS</a></li>
+        <li><a href="IntroductionOfWeb/html_page.html">HTML</a></li>
+        <li><a href="IntroductionOfWeb/css_page.html">CSS</a></li>
         <li><a href="IntroductionOfWeb/javascript_page.html">JavaScript</a></li>
     </ol>
 
