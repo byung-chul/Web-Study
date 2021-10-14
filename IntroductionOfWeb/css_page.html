@@ -26,8 +26,30 @@
         /*tag의 size를 늘리고, 중앙정렬, bottom margin 0*/
         #titleH1 {
             text-align: center;
+            margin-top: 30px;
             margin-bottom: 0px;
             font-size: 70px;
+            border-bottom: 3px solid rgb(65, 220, 225);
+        }
+        #pageList{
+            list-style: none;
+            width: max-content;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            border-right: 3px solid rgb(65, 220, 225);
+            padding-top: 20px;
+            padding-bottom: 20px;
+            padding-right: 40px;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        li:before{
+            content:">";
+            color: rgb(65, 220, 225);
+            margin-right: 5px;
+        }
+        #divideContentAndListLine{
+            border-top: 3px solid rgb(65, 220, 225);
         }
         /*h1 tag의 size를 늘리고, 중앙정렬, bottom margin 0*/
         #active {
@@ -38,12 +60,14 @@
 
 <body>
     <h1 id="titleH1"><a href="../index.html" id="title">WEB</a></h1>
-    <ol>
+    <ul id="pageList">
         <li><a href="html_page.html">HTML</a></li>
         <li><a href="css_page.html" id="active">CSS</a></li>
         <li><a href="javascript_page.html">JavaScript</a></li>
         <li><a href="box_model_page.html">CSS Box Model</a></li>
-    </ol>
+    </ul>
+    <!--PageList와 Content를 구분하기 위한 Line-->
+    <div id=divideContentAndListLine></div>
 
     <h2>CSS이란 무엇인가?</h2>
     <p>
