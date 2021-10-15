@@ -17,12 +17,14 @@
     <style>
         /*기본적인 a tag의 font Color를 지정*/
         a {
-            color:rgb(65, 220, 225);
+            color: rgb(65, 220, 225);
         }
+
         /*Title처럼 나타내는 a tag는 text decoration이 안되도록 지정*/
         #title {
             text-decoration: none;
         }
+
         /*tag의 size를 늘리고, 중앙정렬, bottom margin 0*/
         #titleH1 {
             text-align: center;
@@ -31,77 +33,111 @@
             border-bottom: 3px solid rgb(65, 220, 225);
             font-size: 70px;
         }
-        #pageList{
+
+        #rootDiv {
+            display: grid;
+            grid-template-columns: 1fr 5fr;
+            border-bottom: 3px solid rgb(65, 220, 225);
+        }
+
+        #pageListDiv {
+            border-right: 3px solid rgb(65, 220, 225);
+        }
+
+        #contentDiv {
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+
+        #pageList {
             list-style: none;
             width: max-content;
             margin-top: 0px;
             margin-bottom: 0px;
-            border-right: 3px solid rgb(65, 220, 225);
             padding-top: 20px;
             padding-bottom: 20px;
             padding-right: 40px;
             font-weight: bold;
             font-size: 20px;
         }
-        li:before{
-            content:">";
+
+        #contentHeader {
+            text-align: center;
+        }
+
+        li:before {
+            content: ">";
             color: rgb(65, 220, 225);
             margin-right: 5px;
         }
-        #divideContentAndListLine{
+
+        #divideContentAndListLine {
             border-top: 3px solid rgb(65, 220, 225);
         }
+
         /*h1 tag의 size를 늘리고, 중앙정렬, bottom margin 0*/
         #active {
-            color:rgb(247, 4, 247)
+            color: rgb(247, 4, 247)
         }
     </style>
 </head>
 
 <body>
     <h1 id="titleH1"><a href="../index.html" id="title">WEB</a></h1>
-    <ul id="pageList">
-        <li><a href="html_page.html">HTML</a></li>
-        <li><a href="css_page.html">CSS</a></li>
-        <li><a href="javascript_page.html" id="active">JavaScript</a></li>
-        <li><a href="box_model_page.html">CSS Box Model</a></li>
-    </ul>
-    <!--PageList와 Content를 구분하기 위한 Line-->
-    <div id=divideContentAndListLine></div>
+    <div id="rootDiv">
+        <div id="pageListDiv">
+            <ul id="pageList">
+                <li><a href="html_page.html">HTML</a></li>
+                <li><a href="css_page.html">CSS</a></li>
+                <li><a href="javascript_page.html" id="active">JavaScript</a></li>
+                <li><a href="box_model_page.html">CSS Box Model</a></li>
+                <li><a href="grid_page.html">Grid</a></li>
+            </ul>
+        </div>
 
-    <h2>JavaScript이란 무엇인가?</h2>
-    <p>
-        <a href="https://www.w3resource.com/javascript/introduction/ECMA-and-javascript.php" target="_blank"
-            title="JavaScript specification">
-            JavaScript
-        </a>
-        often abbreviated as JS, is a programming language that conforms to the ECMAScript specification. JavaScript is
-        high-level, often just-in-time compiled, and multi-paradigm. It has curly-bracket syntax, dynamic typing,
-        prototype-based object-orientation, and first-class functions.
-    </p>
-    <p>
-        <img src="javascript_image.jpg" width="100%" height="40%">
-        Alongside HTML and CSS, JavaScript is one of the core technologies of the World Wide Web. Over 97% of
-        websites use it client-side for web page behavior, often incorporating third-party libraries. Most web
-        browsers have a dedicated JavaScript engine to execute the code on the user's device.
-    </p>
-    <p>
-        As a multi-paradigm language, JavaScript supports event-driven, functional, and imperative programming styles.
-        It has application programming interfaces (APIs) for working with text, dates, regular expressions, standard
-        data structures, and the Document Object Model (DOM).
-    </p>
-    <p>
-        The ECMAScript standard does not include any input/output (I/O), such as networking, storage, or graphics
-        facilities. In practice, the web browser or other runtime system provides JavaScript APIs for I/O.
-    </p>
-    <p>
-        JavaScript engines were originally used only in web browsers, but they are now core components of other software
-        systems, most notably servers and a variety of applications.
-    </p>
-    <p>
-        Although there are similarities between JavaScript and Java, including language name, syntax, and respective
-        standard libraries, the two languages are distinct and differ greatly in design.
-    </p>
+        <div id="contentDiv">
+            <h2 id="contentHeader">JavaScript이란 무엇인가?</h2>
+            <p>
+                <a href="https://www.w3resource.com/javascript/introduction/ECMA-and-javascript.php" target="_blank"
+                    title="JavaScript specification">
+                    JavaScript
+                </a>
+                often abbreviated as JS, is a programming language that conforms to the ECMAScript specification.
+                JavaScript is
+                high-level, often just-in-time compiled, and multi-paradigm. It has curly-bracket syntax, dynamic
+                typing,
+                prototype-based object-orientation, and first-class functions.
+            </p>
+            <img src="javascript_image.jpg" width="50%" height="200px">
+            <p>
+                Alongside HTML and CSS, JavaScript is one of the core technologies of the World Wide Web. Over 97% of
+                websites use it client-side for web page behavior, often incorporating third-party libraries. Most web
+                browsers have a dedicated JavaScript engine to execute the code on the user's device.
+            </p>
+            <p>
+                As a multi-paradigm language, JavaScript supports event-driven, functional, and imperative programming
+                styles.
+                It has application programming interfaces (APIs) for working with text, dates, regular expressions,
+                standard
+                data structures, and the Document Object Model (DOM).
+            </p>
+            <p>
+                The ECMAScript standard does not include any input/output (I/O), such as networking, storage, or
+                graphics
+                facilities. In practice, the web browser or other runtime system provides JavaScript APIs for I/O.
+            </p>
+            <p>
+                JavaScript engines were originally used only in web browsers, but they are now core components of other
+                software
+                systems, most notably servers and a variety of applications.
+            </p>
+            <p>
+                Although there are similarities between JavaScript and Java, including language name, syntax, and
+                respective
+                standard libraries, the two languages are distinct and differ greatly in design.
+            </p>
+        </div>
+    </div>
 
     <!--Comment Module (DISQUS)-->
     <div id="disqus_thread"></div>

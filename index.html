@@ -4,7 +4,7 @@
 <head>
     <title>WEB1 - Welcome</title>
     <meta charset="utf-8">
-    
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-SZ0JEVCJN7"></script>
     <script>
@@ -17,12 +17,14 @@
     <style>
         /*기본적인 a tag의 font Color를 지정*/
         a {
-            color:rgb(65, 220, 225);
+            color: rgb(65, 220, 225);
         }
+
         /*Title처럼 나타내는 a tag는 text decoration이 안되도록 지정*/
         #active {
             text-decoration: none;
         }
+
         /*tag의 size를 늘리고, 중앙정렬, bottom margin 0*/
         #titleH1 {
             text-align: center;
@@ -31,76 +33,120 @@
             font-size: 70px;
             border-bottom: 3px solid rgb(65, 220, 225);
         }
-        #pageList{
+
+        #rootDiv {
+            display: grid;
+            grid-template-columns: 1fr 5fr;
+            border-bottom: 3px solid rgb(65, 220, 225);
+        }
+
+        #pageListDiv {
+            border-right: 3px solid rgb(65, 220, 225);
+        }
+
+        #contentDiv {
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+
+        #pageList {
             list-style: none;
             width: max-content;
             margin-top: 0px;
             margin-bottom: 0px;
-            border-right: 3px solid rgb(65, 220, 225);
             padding-top: 20px;
             padding-bottom: 20px;
             padding-right: 40px;
             font-weight: bold;
             font-size: 20px;
         }
-        li:before{
-            content:">";
+
+        #contentHeader {
+            text-align: center;
+        }
+
+        li:before {
+            content: ">";
             color: rgb(65, 220, 225);
             margin-right: 5px;
         }
-        #divideContentAndListLine{
-            border-top: 3px solid rgb(65, 220, 225);
-        }
+
     </style>
 </head>
 
 <body>
     <h1 id="titleH1"><a href="index.html" id="active">WEB</a></h1>
-    <ul id="pageList">
-        <li><a href="IntroductionOfWeb/html_page.html">HTML</a></li>
-        <li><a href="IntroductionOfWeb/css_page.html">CSS</a></li>
-        <li><a href="IntroductionOfWeb/javascript_page.html">JavaScript</a></li>
-        <li><a href="IntroductionOfWeb/box_model_page.html">CSS Box Model</a></li>
-    </ul>
-    <!--PageList와 Content를 구분하기 위한 Line-->
-    <div id=divideContentAndListLine></div>
+    <div id="rootDiv">
+        <div id="pageListDiv">
+            <ul id="pageList">
+                <li><a href="IntroductionOfWeb/html_page.html">HTML</a></li>
+                <li><a href="IntroductionOfWeb/css_page.html">CSS</a></li>
+                <li><a href="IntroductionOfWeb/javascript_page.html">JavaScript</a></li>
+                <li><a href="IntroductionOfWeb/box_model_page.html">CSS Box Model</a></li>
+                <li><a href="IntroductionOfWeb/grid_page.html">Grid</a></li>
+            </ul>
+        </div>
 
-    <h2>WEB이란 무엇인가?</h2>
-    <p>
-        <a href="https://www.w3.org/standards/" target="_blank" title="Web specification">
-            The World Wide Web (WWW)
-        </a>
-        , commonly known as the Web, is an information system where documents and other web resources are identified by
-        Uniform Resource Locators (URLs, such as https://example.com/), which may be interlinked by hyperlinks, and are
-        accessible over the Internet. The resources of the Web are transferred via the Hypertext Transfer Protocol
-        (HTTP), may be accessed by users by a software application called a web browser, and are published by a software
-        application called a web server. The World Wide Web is not synonymous with the Internet, which pre-dated the Web
-        in some form by over two decades and upon the technologies of which the Web is built.
-        <img src="web_image.jpg" width="100%" height="40%">
-    </p>
-    <p>
-        English scientist Tim Berners-Lee invented the World Wide Web in 1989. He wrote the first web browser in 1990
-        while employed at CERN near Geneva, Switzerland. The browser was released outside CERN to other research
-        institutions starting in January 1991, and then to the general public in August 1991. The Web began to enter
-        everyday use in 1993–4, when websites for general use started to become available. The World Wide Web has been
-        central to the development of the Information Age, and is the primary tool billions of people use to interact on
-        the Internet.
-    </p>
-    <p>
-        Web resources may be any type of downloaded media, but web pages are hypertext documents formatted in Hypertext
-        Markup Language (HTML). Special HTML syntax displays embedded hyperlinks with URLs which permits users to
-        navigate to other web resources. In addition to text, web pages may contain references to images, video, audio,
-        and software components which are either displayed or internally executed in the user's web browser to render
-        pages or streams of multimedia content.
-    </p>
-    <p>
-        Multiple web resources with a common theme and usually a common domain name make up a website. Websites are
-        stored in computers that are running a web server, which is a program that responds to requests made over the
-        Internet from web browsers running on a user's computer. Website content can be provided by a publisher, or
-        interactively from user-generated content. Websites are provided for a myriad of informative, entertainment,
-        commercial, and governmental reasons.
-    </p>
-
+        <div id="contentDiv">
+            <h2 id="contentHeader">WEB이란 무엇인가?</h2>
+            <p>
+                <a href="https://www.w3.org/standards/" target="_blank" title="Web specification">
+                    The World Wide Web (WWW)
+                </a>
+                , commonly known as the Web, is an information system where documents and other web resources are
+                identified
+                by
+                Uniform Resource Locators (URLs, such as https://example.com/), which may be interlinked by hyperlinks,
+                and
+                are
+                accessible over the Internet. The resources of the Web are transferred via the Hypertext Transfer
+                Protocol
+                (HTTP), may be accessed by users by a software application called a web browser, and are published by a
+                software
+                application called a web server. The World Wide Web is not synonymous with the Internet, which pre-dated
+                the
+                Web
+                in some form by over two decades and upon the technologies of which the Web is built.
+                <img src="web_image.jpg" width="100%" height="40%">
+            </p>
+            <p>
+                English scientist Tim Berners-Lee invented the World Wide Web in 1989. He wrote the first web browser in
+                1990
+                while employed at CERN near Geneva, Switzerland. The browser was released outside CERN to other research
+                institutions starting in January 1991, and then to the general public in August 1991. The Web began to
+                enter
+                everyday use in 1993–4, when websites for general use started to become available. The World Wide Web
+                has
+                been
+                central to the development of the Information Age, and is the primary tool billions of people use to
+                interact on
+                the Internet.
+            </p>
+            <p>
+                Web resources may be any type of downloaded media, but web pages are hypertext documents formatted in
+                Hypertext
+                Markup Language (HTML). Special HTML syntax displays embedded hyperlinks with URLs which permits users
+                to
+                navigate to other web resources. In addition to text, web pages may contain references to images, video,
+                audio,
+                and software components which are either displayed or internally executed in the user's web browser to
+                render
+                pages or streams of multimedia content.
+            </p>
+            <p>
+                Multiple web resources with a common theme and usually a common domain name make up a website. Websites
+                are
+                stored in computers that are running a web server, which is a program that responds to requests made
+                over
+                the
+                Internet from web browsers running on a user's computer. Website content can be provided by a publisher,
+                or
+                interactively from user-generated content. Websites are provided for a myriad of informative,
+                entertainment,
+                commercial, and governmental reasons.
+            </p>
+        </div>
+    </div>
     <!--Comment Module (DISQUS)-->
     <div id="disqus_thread"></div>
     <script>
