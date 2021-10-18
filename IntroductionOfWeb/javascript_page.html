@@ -57,8 +57,13 @@
             padding-top: 20px;
             padding-bottom: 20px;
             padding-right: 40px;
+            color: rgb(65, 220, 225);
             font-weight: bold;
             font-size: 20px;
+        }
+
+        #calculatorList {
+            list-style: none;
         }
 
         #contentHeader {
@@ -69,10 +74,6 @@
             content: ">";
             color: rgb(65, 220, 225);
             margin-right: 5px;
-        }
-
-        #divideContentAndListLine {
-            border-top: 3px solid rgb(65, 220, 225);
         }
 
         /*h1 tag의 size를 늘리고, 중앙정렬, bottom margin 0*/
@@ -92,6 +93,11 @@
                 <li><a href="javascript_page.html" id="active">JavaScript</a></li>
                 <li><a href="box_model_page.html">CSS Box Model</a></li>
                 <li><a href="grid_page.html">Grid</a></li>
+                <li>Calculator
+                    <ul id="calculatorList">
+                        <li><a href="calculator.html">arithmetic operation</a></li>
+                    </ul>
+                </li>
             </ul>
         </div>
 
