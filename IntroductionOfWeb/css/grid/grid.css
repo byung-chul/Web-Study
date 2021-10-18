@@ -1,0 +1,9 @@
+#parentDivForGrid {
+    border: 5px solid red;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+.gridDiv {
+    border: 5px solid royalblue;
+}

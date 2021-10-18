@@ -14,82 +14,9 @@
 
         gtag('config', 'G-SZ0JEVCJN7');
     </script>
-    <style>
-        /*기본적인 a tag의 font Color를 지정*/
-        a {
-            color: rgb(65, 220, 225);
-        }
-
-        /*Title처럼 나타내는 a tag는 text decoration이 안되도록 지정*/
-        #title {
-            text-decoration: none;
-        }
-
-        /*tag의 size를 늘리고, 중앙정렬, bottom margin 0*/
-        #titleH1 {
-            margin-top: 30px;
-            margin-bottom: 0px;
-            border-bottom: 3px solid rgb(65, 220, 225);
-            text-align: center;
-            font-size: 70px;
-        }
-
-        #rootDiv {
-            display: grid;
-            grid-template-columns: 1fr 5fr;
-            border-bottom: 3px solid rgb(65, 220, 225);
-        }
-
-        #pageListDiv {
-            border-right: 3px solid rgb(65, 220, 225);
-        }
-
-        #contentDiv {
-            margin-left: 50px;
-            margin-right: 50px;
-        }
-
-        #pageList {
-            list-style: none;
-            width: max-content;
-            margin-top: 0px;
-            margin-bottom: 0px;
-            padding-top: 20px;
-            padding-bottom: 20px;
-            padding-right: 40px;
-            color: rgb(65, 220, 225);
-            font-weight: bold;
-            font-size: 20px;
-        }
-
-        #calculatorList {
-            list-style: none;
-        }
-
-        #descriptionHeader {
-            text-align: center;
-        }
-
-        li:before {
-            margin-right: 5px;
-            color: rgb(65, 220, 225);
-            content: ">";
-        }
-
-        /*h1 tag의 size를 늘리고, 중앙정렬, bottom margin 0*/
-        #active {
-            color: rgb(247, 4, 247)
-        }
-
-        /*CSS Box Model 실습 CSS*/
-        .cssBoxModel {
-            width: fit-content;
-            display: block;
-            margin: 20px;
-            border: 5px solid red;
-            padding: 20px;
-        }
-    </style>
+    
+    <link rel="stylesheet" type="text/css" href="../index.css">
+    <link rel="stylesheet" type="text/css" href="css/common/active.css">
 </head>
 
 <body>
@@ -111,7 +38,7 @@
         </div>
 
         <div id="contentDiv">
-            <h1 id="descriptionHeader">JavaScript를 이용한 계산기</h1>
+            <h2 id="contentHeader">JavaScript를 이용한 계산기</h2>
             <p>아래의 버튼을 누르면, message창으로 계산을 할 수 있습니다.</p>
             <p>숫자 두개와 입력할 연산의 종류를 입력하면 원하시는 값을 얻을 수 있습니다.</p>
             <p>연산 종류 - (+, -, *, /, %)</p>

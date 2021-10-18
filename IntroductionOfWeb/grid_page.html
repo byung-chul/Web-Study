@@ -14,83 +14,10 @@
 
         gtag('config', 'G-SZ0JEVCJN7');
     </script>
-    <style>
-        /*기본적인 a tag의 font Color를 지정*/
-        a {
-            color: rgb(65, 220, 225);
-        }
 
-        /*Title처럼 나타내는 a tag는 text decoration이 안되도록 지정*/
-        #title {
-            text-decoration: none;
-        }
-
-        /*tag의 size를 늘리고, 중앙정렬, bottom margin 0*/
-        #titleH1 {
-            text-align: center;
-            margin-top: 30px;
-            margin-bottom: 0px;
-            border-bottom: 3px solid rgb(65, 220, 225);
-            font-size: 70px;
-        }
-
-        #rootDiv {
-            display: grid;
-            grid-template-columns: 1fr 5fr;
-            border-bottom: 3px solid rgb(65, 220, 225);
-        }
-
-        #pageListDiv {
-            border-right: 3px solid rgb(65, 220, 225);
-        }
-
-        #contentDiv {
-            margin-left: 50px;
-            margin-right: 50px;
-        }
-
-        #pageList {
-            list-style: none;
-            width: max-content;
-            margin-top: 0px;
-            margin-bottom: 0px;
-            padding-top: 20px;
-            padding-bottom: 20px;
-            padding-right: 40px;
-            color: rgb(65, 220, 225);
-            font-weight: bold;
-            font-size: 20px;
-        }
-
-        #calculatorList {
-            list-style: none;
-        }
-
-        li:before {
-            content: ">";
-            color: rgb(65, 220, 225);
-            margin-right: 5px;
-        }
-
-        #descriptionParagraph {
-            text-align: center;
-        }
-
-        /*h1 tag의 size를 늘리고, 중앙정렬, bottom margin 0*/
-        #active {
-            color: rgb(247, 4, 247)
-        }
-
-        #parentDivForGrid {
-            border: 5px solid red;
-            display: grid;
-            grid-template-columns: 1fr 4fr;
-        }
-
-        .gridDiv {
-            border: 5px solid royalblue;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="../index.css">
+    <link rel="stylesheet" type="text/css" href="css/common/active.css">
+    <link rel="stylesheet" type="text/css" href="css/grid/grid.css">
 </head>
 
 <body>
@@ -112,7 +39,7 @@
         </div>
 
         <div id="contentDiv">
-            <p id="descriptionParagraph">CSS Display Property중 하나인 grid에 대한 Page</p>
+            <h2 id="contentHeader">CSS Display Property중 하나인 grid에 대한 Page</h2>
             <p>Grid를 이용하여 HTML Element의 배치를 효율적으로 할 수 있음</p>
             <div id=parentDivForGrid>
                 <div class="gridDiv">Grid Test Div1</div>
