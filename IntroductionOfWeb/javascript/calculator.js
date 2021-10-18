@@ -2,28 +2,31 @@
 function calculate(firstInput, secondInput, operator) {
     var result = 0;
 
+    var first = Number(firstInput);
+    var second = Number(secondInput);
+    
     if (operator === '+') {
-        result = firstInput + secondInput;
+        result = first + second;
     } else if (operator === '-') {
-        result = firstInput - secondInput;
+        result = first - second;
     } else if (operator === '*') {
-        result = firstInput * secondInput;
+        result = first * second;
     } else if (operator === '/') {
-        result = firstInput / secondInput;
+        result = first / second;
     } else if (operator === '%') {
-        result = firstInput % secondInput;
+        result = first % second;
     } else {
         console.log("That must Wrong result Debug This!!!!!");
     }
 
-    console.log(firstInput + ' ' + operator + ' ' + secondInput + ' = ' + result);
+    console.log(first + ' ' + operator + ' ' + second + ' = ' + result);
 
     document.getElementById("resultParagraph").innerHTML = result;
 }
 
 //입력한 Input이 숫자인지 아닌지 반환하는 함수
 function isValidNumberInput(input) {
-    if (isNaN(Number(input))) {
+    if (isNaN(Number(input)) || input === "") {
         return false;
     } else {
         return true;
