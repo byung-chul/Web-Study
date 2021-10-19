@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>WEB - CSS Box Model</title>
+    <title>WEB - Calculator</title>
     <meta charset="utf-8">
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -17,7 +17,6 @@
 
     <link rel="stylesheet" type="text/css" href="../index.css">
     <link rel="stylesheet" type="text/css" href="css/common/active.css">
-    <link rel="stylesheet" type="text/css" href="css/cssBoxModel/cssBoxModel.css">
 </head>
 
 <body>
@@ -28,24 +27,29 @@
                 <li><a href="html_page.html">HTML</a></li>
                 <li><a href="css_page.html">CSS</a></li>
                 <li><a href="javascript_page.html">JavaScript</a></li>
-                <li><a href="box_model_page.html" id="active">CSS Box Model</a></li>
+                <li><a href="box_model_page.html">CSS Box Model</a></li>
                 <li><a href="grid_page.html">Grid</a></li>
                 <li>Calculator
                     <ul id="calculatorList">
                         <li><a href="calculator.html">arithmetic operation</a></li>
-                        <li><a href="bmiCalculator.html">BMI Calculator</a></li>
+                        <li><a href="bmiCalculator.html" id="active">BMI Calculator</a></li>
                     </ul>
                 </li>
             </ul>
         </div>
 
         <div id="contentDiv">
-            <h2 id="contentHeader">CSS Box Model을 Test하기 위한 Page</h2>
-            <p>margin, border, padding에 대한 test를 진행 Box Model 에 대한 이해</p>
-            <h1 class="cssBoxModel">CSSBoxModel</h1>
-            <h1 class="cssBoxModel">CSSBoxModel</h1>
+            <h2 id="contentHeader">JavaScript를 이용한 BMI 지수 계산기</h2>
+            <p>아래의 버튼을 누르면, message창으로 계산을 할 수 있습니다.</p>
+            <p>키와 몸무게를 입력하면 해당하는 BMI지수를 얻을 수 있습니다.</p>
+            <p>키는 m단위, 몸무게는 kg단위를 입력하시면 됩니다.</p>
+            <button id="calculateButton">계산 시작하기</button>
+            <p>BMI지수</p>
+            <p id="resultParagraph">결과값이 이곳에 표시됩니다.</p>
         </div>
     </div>
+
+    <script type="text/javascript" src="javascript/bmiCalculator.js"></script>
 
     <!--Comment Module (DISQUS)-->
     <div id="disqus_thread"></div>
