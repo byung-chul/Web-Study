@@ -7,6 +7,92 @@ function calculateBMI(weight, height) {
     console.log('Calculated BMI' + ' = ' + result);
 
     document.getElementById("resultParagraph").innerHTML = result;
+    
+    changeBMITableRowColor(result);
+}
+
+function changeBMITableRowColor(result) {
+    
+    var tableRowStyle = undefined;
+    var backgroundColor = "";
+    var otherRowList = [];
+
+    if(result < 18.5){
+        
+        tableRowStyle = document.getElementById("lowBMIRow").style;
+        backgroundColor = "rgb(7, 131, 247)";
+        
+        otherRowList.push(document.getElementById("normalBMIRow").style);
+        otherRowList.push(document.getElementById("littleOverBMIRow").style);
+        otherRowList.push(document.getElementById("smallOverBMIRow").style);
+        otherRowList.push(document.getElementById("normalOverBMIRow").style);
+        otherRowList.push(document.getElementById("highOverBMIRow").style);
+
+    }else if(result < 23){
+        
+        tableRowStyle = document.getElementById("normalBMIRow").style;
+        backgroundColor = "rgb(47, 207, 32)";
+
+        otherRowList.push(document.getElementById("lowBMIRow").style);
+        otherRowList.push(document.getElementById("littleOverBMIRow").style);
+        otherRowList.push(document.getElementById("smallOverBMIRow").style);
+        otherRowList.push(document.getElementById("normalOverBMIRow").style);
+        otherRowList.push(document.getElementById("highOverBMIRow").style);
+    
+    }else if(result < 25){
+    
+        tableRowStyle = document.getElementById("littleOverBMIRow").style;
+        backgroundColor = "rgb(255, 174, 0)";
+    
+        otherRowList.push(document.getElementById("lowBMIRow").style);
+        otherRowList.push(document.getElementById("normalBMIRow").style);
+        otherRowList.push(document.getElementById("smallOverBMIRow").style);
+        otherRowList.push(document.getElementById("normalOverBMIRow").style);
+        otherRowList.push(document.getElementById("highOverBMIRow").style);
+    
+    }else if(result < 30){
+    
+        tableRowStyle = document.getElementById("smallOverBMIRow").style;
+        backgroundColor = "rgb(255, 100, 0)";
+    
+        otherRowList.push(document.getElementById("lowBMIRow").style);
+        otherRowList.push(document.getElementById("normalBMIRow").style);
+        otherRowList.push(document.getElementById("littleOverBMIRow").style);
+        otherRowList.push(document.getElementById("normalOverBMIRow").style);
+        otherRowList.push(document.getElementById("highOverBMIRow").style);
+    
+    }else if(result < 40){
+    
+        tableRowStyle = document.getElementById("normalOverBMIRow").style;
+        backgroundColor = "rgb(255, 50, 0)";
+    
+        otherRowList.push(document.getElementById("lowBMIRow").style);
+        otherRowList.push(document.getElementById("normalBMIRow").style);
+        otherRowList.push(document.getElementById("littleOverBMIRow").style);
+        otherRowList.push(document.getElementById("smallOverBMIRow").style);
+        otherRowList.push(document.getElementById("highOverBMIRow").style);
+    
+    }else{
+    
+        tableRowStyle = document.getElementById("highOverBMIRow").style;
+        backgroundColor = "rgb(255, 0, 0)";
+    
+        otherRowList.push(document.getElementById("lowBMIRow").style);
+        otherRowList.push(document.getElementById("normalBMIRow").style);
+        otherRowList.push(document.getElementById("littleOverBMIRow").style);
+        otherRowList.push(document.getElementById("smallOverBMIRow").style);
+        otherRowList.push(document.getElementById("normalOverBMIRow").style);
+    
+    }
+    
+    //해당되지 않는 Table Row의 색을 원복
+    for(var i = 0; i < otherRowList.length; i++){
+        otherRowList[i].color = "black";
+        otherRowList[i].backgroundColor = "white";
+    }
+    
+    tableRowStyle.color = "white";
+    tableRowStyle.backgroundColor = backgroundColor;
 }
 
 //입력한 키와 몸무게가 적절한 값인지 반환하는 함수

@@ -17,6 +17,7 @@
 
     <link rel="stylesheet" type="text/css" href="../index.css">
     <link rel="stylesheet" type="text/css" href="css/common/active.css">
+    <link rel="stylesheet" type="text/css" href="css/common/reference.css">
 </head>
 
 <body>
@@ -40,12 +41,58 @@
 
         <div id="contentDiv">
             <h2 id="contentHeader">JavaScript를 이용한 BMI 지수 계산기</h2>
-            <p>아래의 버튼을 누르면, message창으로 계산을 할 수 있습니다.</p>
-            <p>키와 몸무게를 입력하면 해당하는 BMI지수를 얻을 수 있습니다.</p>
-            <p>키는 m단위, 몸무게는 kg단위를 입력하시면 됩니다.</p>
+            <h3>BMI지수란</h3>
+            <p>
+                체질량 지수(body mass index, BMI)는 인간의 비만도를 나타내는 지수로, 체중과 키의 관계로 계산된다.<br>
+                키가 t 미터, 체중이 w 킬로그램일 때, BMI는 다음과 같다. <br>
+                (키의 단위가 센티미터가 아닌 미터임에 유의해야 한다.)
+            </p>
+            <p>
+                아래의 버튼을 누르면, message창으로 계산을 할 수 있습니다.<br>
+                키와 몸무게를 입력하면 해당하는 BMI지수를 얻을 수 있습니다.
+            </p>
+            <p>키는 m단위, 몸무게는 kg단위</p>
             <button id="calculateButton">계산 시작하기</button>
             <p>BMI지수</p>
             <p id="resultParagraph">결과값이 이곳에 표시됩니다.</p>
+            
+            <table border="1" width="300" height="500">
+                <tr id="tableTitle" align="center">
+                    <td colspan="4">한국의 BMI 지수 기준</td>
+                </tr>
+                <tr align="center">
+                    <td>판정 기준</td>
+                    <td>WHO<br>세계보건기구</td>
+                </tr>
+                <tr id="lowBMIRow" align="center">
+                    <td>18.5미만</td>
+                    <td>저체중</td>
+                </tr>
+                <tr id="normalBMIRow" align="center">
+                    <td>18.5이상<br>23미만</td>
+                    <td>정상</td>
+                </tr>
+                <tr id="littleOverBMIRow" align="center">
+                    <td>23이상<br>25미만</td>
+                    <td>과체중</td>
+                </tr>
+                <tr id="smallOverBMIRow" align="center">
+                    <td>25이상<br>30미만</td>
+                    <td>경도비만</td>
+                </tr>
+                <tr id="normalOverBMIRow" align="center">
+                    <td>30이상<br>40미만</td>
+                    <td>중등도비만</td>
+                </tr>
+                <tr id="highOverBMIRow" align="center">
+                    <td>40이상</td>
+                    <td>고도비만</td>
+                </tr>
+            </table>
+            <div id="referenceParagraph">
+                BMI 지수 계산식 및 판정 기준 (대한비만학회) 참고<br>
+                http://general.kosso.or.kr/html/?pmode=obesityDiagnosis
+            </div>
         </div>
     </div>
 
