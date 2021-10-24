@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h1>JavaScript를 이용한 온도 변환기</h1>
+    <p>아래의 버튼을 누르면, message창으로 계산을 할 수 있습니다.</p>
+    <p>섭씨와 화씨를 변환할 수 있습니다.</p>
+    <p>Celsius To Fahrenheit</p>
+    <button id="CelsiusToFarenheitButton">계산 시작하기</button>
+    <p>Farenheit</p>
+    <p id="CtoFResultParagraph">결과값이 이곳에 표시됩니다.</p>
+
+    <p>Fahrenheit To Celsius</p>
+    <button id="FarenheitToCelsiusButton">계산 시작하기</button>
+    <p>Celsius</p>
+    <p id="FtoCResultParagraph">결과값이 이곳에 표시됩니다.</p>
+
+    <script>
+        //Celsius To Farenheit 연산 함수
+        function calculateCtoF(celsius) {
+            var result = 0;
+
+            result = (celsius * 9/5) + 32;
+
+            console.log('Calculated Farenheit' + ' = ' + result);
+
+            document.getElementById("CtoFResultParagraph").innerHTML = result;
+        }
+
+        //Celsius To Farenheit 연산 함수
+        function calculateFtoC(farenheit) {
+            var result = 0;
+
+            result = (farenheit - 32) * (5/9);
+        
+            console.log('Calculated Celsius' + ' = ' + result);
+        
+            document.getElementById("FtoCResultParagraph").innerHTML = result;
+        }
+
+        //입력한 값이 숫자인지 반환하는 함수
+        function isValidInput(number) {
+            return !isNaN(Number(number))
+        }
+
+        var cToFInputButton = document.getElementById("CelsiusToFarenheitButton");
+        var fToCInputButton = document.getElementById("FarenheitToCelsiusButton");
+
+        cToFInputButton.onclick = function () {
+            //섭씨 온도를 화씨 온도로 변환하는 계산 버튼 Click Event 처리
+            var isCelsiusInputValid = false;
+            
+            //키 입력 받기
+            while (!isCelsiusInputValid) {
+                var celsiusInput = prompt("계산할 섭씨 온도를 입력해 주세요.\n단위는 생략해주세요.", 0);
+                console.log("Input Celsius Value = " + celsiusInput);
+                //prompt 취소 Button check
+                if (celsiusInput === null) {
+                    return;
+                }
+
+                isCelsiusInputValid = isValidInput(celsiusInput);
+                if (isCelsiusInputValid === false) {
+                    alert("입력하신 값이 잘못되었습니다.\n옳바른 값을 입력해 주세요.");
+                }
+            }
+
+            calculateCtoF(celsiusInput);
+
+        };
+
+        fToCInputButton.onclick = function () {
+            //화씨 온도를 섭씨 온도로 변환하는 계산 버튼 Click Event 처리
+            var isFarenheitInputValid = false;
+            
+            //키 입력 받기
+            while (!isFarenheitInputValid) {
+                var farenheitInput = prompt("계산할 화씨 온도를 입력해 주세요.\n단위는 생략해주세요.", 0);
+                console.log("Input Farenheit Value = " + farenheitInput);
+                //prompt 취소 Button check
+                if (farenheitInput === null) {
+                    return;
+                }
+
+                isFarenheitInputValid = isValidInput(farenheitInput);
+                if (isFarenheitInputValid === false) {
+                    alert("입력하신 값이 잘못되었습니다.\n옳바른 값을 입력해 주세요.");
+                }
+            }
+
+            calculateFtoC(farenheitInput);
+
+        };
+
+    </script>
+
+</body>
+
+</html>
