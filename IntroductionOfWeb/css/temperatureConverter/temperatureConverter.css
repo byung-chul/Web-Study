@@ -1,0 +1,26 @@
+input {
+    position: relative;
+}
+
+form {
+    align-self: center;
+}
+
+#input{
+    float: left;
+}
+
+#inputTemperature, #outputTemperature{
+    width: 160px;
+    height: 100px;
+    font-size: 50px;
+}
+
+#arrowImage{
+    float: left;
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    margin-top: 0px;
+    transform: rotate(90deg);
+}

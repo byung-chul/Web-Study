@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>WEB - Calculator</title>
+    <meta charset="utf-8">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SZ0JEVCJN7"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-SZ0JEVCJN7');
+    </script>
+
+    <link rel="stylesheet" type="text/css" href="../index.css">
+    <link rel="stylesheet" type="text/css" href="css/common/active.css">
+    <link rel="stylesheet" type="text/css" href="css/common/reference.css">
+    <link rel="stylesheet" type="text/css" href="css/temperatureConverter/temperatureConverter.css">
+</head>
+
+<body>
+    <h1 id="titleH1"><a href="../index.html" id="title">WEB</a></h1>
+    <div id="rootDiv">
+        <div id="pageListDiv">
+            <ul id="pageList">
+                <li><a href="html_page.html">HTML</a></li>
+                <li><a href="css_page.html">CSS</a></li>
+                <li><a href="javascript_page.html">JavaScript</a></li>
+                <li><a href="box_model_page.html">CSS Box Model</a></li>
+                <li><a href="grid_page.html">Grid</a></li>
+                <li>Calculator
+                    <ul id="calculatorList">
+                        <li><a href="calculator.html">arithmetic operation</a></li>
+                        <li><a href="bmiCalculator.html">BMI Calculator</a></li>
+                        <li><a href="temperature_converter.html" id="active">Temperature Converter</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div id="contentDiv">
+            <h2 id="contentHeader">JavaScript를 이용한 온도 변환기</h2>
+            <p>
+                아래의 버튼을 누르면, message창으로 계산을 할 수 있습니다.<br>
+                온도를 입력하시면, 입력하신 온도에 해당되는 각 변환 온도가 표시됩니다.
+            </p>
+
+            <div id="converter">
+                <div id="input">
+                    <!--Input-->
+                    <input type="number" id="inputTemperature" step="0.01" placeholder="Input" required>
+
+                    <form>
+                        <select name="inputSelector">
+                            <option value="celsius">섭씨(Celsius)</option>
+                            <option value="farenheit">화씨(Farenheit)</option>
+                            <option value="kelvin">켈빈(Kelvin)</option>
+                        </select>
+                    </form>
+                </div>
+
+                <img src="image/temperatureConverter/arrow_image.png" id="arrowImage">
+
+                <div id="output">
+                    <!--Input-->
+                    <input type="number" id="outputTemperature" step="0.01" placeholder="output" required>
+
+                    <form>
+                        <select name="outputSelector">
+                            <option value="celsius">섭씨(Celsius)</option>
+                            <option value="farenheit">화씨(Farenheit)</option>
+                            <option value="kelvin">켈빈(Kelvin)</option>
+                        </select>
+                    </form>
+                </div>
+            </div>
+
+            <h3>섭씨 온도(Celtius))란</h3>
+            <p>
+                섭씨 온도(攝氏溫度, 영어: Celsius, centigrade scale)는 1 atm에서의 물의 어는점을 0도, 끓는점을 100도로 정한 온도 체계이며, 기호는 °C이다.<br>
+                1742년 스웨덴의 천문학자 안데르스 셀시우스가 처음으로 제안하였으며, 영어 등에서는 제안자의 이름을 따 ‘셀시어스’로 부르고 있다.<br>
+                셀시우스는 물의 어는점을 100도, 끓는점을 0도로 제안하였으나 사용이 불편하여 후에 끓는 점과 어는 점의 기준을 바꾸었다. 하지만 온도 단위는 여전히 같은 100등분 이므로 섭씨
+                온도라고 부른다.<br>
+            </p>
+            <h3>화씨 온도(Farenheit)란</h3>
+            <p>
+                화씨 온도(華氏溫度, 영어: Fahrenheit)는 독일의다니엘 가브리엘 파렌하이트(Daniel GabrielFahrenheit)의 이름을 딴 온도 단위이며,기호로는 °F를 쓴다.<br>
+                물이 어는 온도는 32도(섭씨0도)이며, 물이 끓는 온도는 212도(섭씨 100도이므로, 이 사이의 온도는 180등분된다.<br>
+                과거에는 영국과 미국의 영향으로 영어권의 여러나라에서 널리 쓰였고, 이 때문에 “English Unit이라고 표현하기도 한다. 그러나 현재 영국, 캐나다등 대부분의 영어권 국가에서도
+                미터법을 채택하면서섭씨로 바꾸었고, 미국을 비롯한 극소수의국가에서만 여전히 공식적인 단위로 사용하고 있다.<br>
+                화씨(華氏)란 이름은 독일 인명인 파렌하이(Fahrenheit)의 중국 음역어 ‘화륜해특’(중국어: 倫海特, 병음: Huálúnhǎitè 화룬하이터[*])에서유래한다. 화씨 100 °F는
+                섭씨 37.8 °C로 인간의체온과 비슷하다.
+            </p>
+            <h3>켈빈 온도(Kelvin)란</h3>
+            <p>
+                절대온도(絕對溫度) 또는 켈빈(kelvin)은 온도의 SI 단위이다. 켈빈은 절대 온도를 측정하기 때문에, 0 K은 절대 영도(이상 기체의 부피가 0이 되는 온도)이며, 섭씨 0도는
+                273.15 K에 해당한다. 상대온도의 단위로는 섭씨도와 같다. 켈빈 경의 이름을 땄으며, 기호는 K다.
+            </p>
+            <div id="referenceParagraph">
+                <p>
+                    섭씨 온도 참고<br>
+                    https://ko.wikipedia.org/wiki/%EC%84%AD%EC%94%A8
+                </p>
+                <p>
+                    화씨 온도 참고<br>
+                    https://ko.wikipedia.org/wiki/%ED%99%94%EC%94%A8
+                </p>
+                <p>
+                    켈빈 온도 참고<br>
+                    https://ko.wikipedia.org/wiki/%EC%BC%88%EB%B9%88
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="javascript/bmiCalculator.js"></script>
+
+    <!--Comment Module (DISQUS)-->
+    <div id="disqus_thread"></div>
+    <script>
+        /**
+        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+        /*
+        var disqus_config = function () {
+        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+        */
+        (function () { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://web1-9vpr4sbqwi.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the
+        <a href="https://disqus.com/?ref_noscript">comments powered by
+            Disqus.
+        </a>
+    </noscript>
+
+    <!--Chat Module (Tawk)-->
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function () {
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/615e7fe725797d7a8902b8cc/1fhci78cp';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    </script>
+    <!--End of Tawk.to Script-->
+
+</body>
+
+</html>
