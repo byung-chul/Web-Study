@@ -118,28 +118,3 @@ function inputConvert(input, inputSelector, outputSelector, output) {
 
     showResult(output, result);
 }
-
-// inputButton.onclick = function () {
-//     //온도 입력받기
-//     var isInputValid = false;
-//     var temperatureInput = 0;
-
-//     while (!isInputValid) {
-//         temperatureInput = prompt("변환할 온도를 입력해주세요.\n단위는 생략해주세요.", 0);
-//         console.log("Input Temperature Value = " + temperatureInput);
-//         //prompt 취소 Button check
-//         if (temperatureInput === null) {
-//             return;
-//         }
-
-//         isInputValid = isValidInput(temperatureInput);
-//         if (isInputValid === false) {
-//             alert("입력하신 값이 잘못되었습니다.\n옳바른 값을 입력해 주세요.");
-//         }
-//     }
-
-//     calculateInputToC(temperatureInput);
-//     calculateInputToF(temperatureInput);
-//     calculateInputToK(temperatureInput);
-
-// };
