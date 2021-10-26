@@ -54,7 +54,7 @@
                     <input type="number" id="inputTemperature" step="0.01" placeholder="Input" required>
 
                     <form>
-                        <select name="inputSelector">
+                        <select id="inputSelector">
                             <option value="celsius">섭씨(Celsius)</option>
                             <option value="farenheit">화씨(Farenheit)</option>
                             <option value="kelvin">켈빈(Kelvin)</option>
@@ -69,16 +69,16 @@
                     <input type="number" id="outputTemperature" step="0.01" placeholder="output" required>
 
                     <form>
-                        <select name="outputSelector">
+                        <select id="outputSelector">
                             <option value="celsius">섭씨(Celsius)</option>
-                            <option value="farenheit">화씨(Farenheit)</option>
+                            <option value="farenheit" selected>화씨(Farenheit)</option>
                             <option value="kelvin">켈빈(Kelvin)</option>
                         </select>
                     </form>
                 </div>
             </div>
 
-            <h3>섭씨 온도(Celtius))란</h3>
+            <h3>섭씨 온도(Celsius)란</h3>
             <p>
                 섭씨 온도(攝氏溫度, 영어: Celsius, centigrade scale)는 1 atm에서의 물의 어는점을 0도, 끓는점을 100도로 정한 온도 체계이며, 기호는 °C이다.<br>
                 1742년 스웨덴의 천문학자 안데르스 셀시우스가 처음으로 제안하였으며, 영어 등에서는 제안자의 이름을 따 ‘셀시어스’로 부르고 있다.<br>
@@ -116,7 +116,7 @@
         </div>
     </div>
 
-    <script type="text/javascript" src="javascript/bmiCalculator.js"></script>
+    <script type="text/javascript" src="javascript/temperatureConverter.js"></script>
 
     <!--Comment Module (DISQUS)-->
     <div id="disqus_thread"></div>
