@@ -1,0 +1,21 @@
+input {
+    position: relative;
+}
+
+#input {
+    float: left;
+}
+
+#inputText {
+    width: 500px;
+    height: 200px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    resize: none;
+}
+
+#textLength {
+
+    margin-left: 5em;
+    font-size: 30pt;
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>WEB - Text Counter</title>
+    <meta charset="utf-8">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SZ0JEVCJN7"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-SZ0JEVCJN7');
+    </script>
+
+    <link rel="stylesheet" type="text/css" href="../index.css">
+    <link rel="stylesheet" type="text/css" href="css/common/active.css">
+    <link rel="stylesheet" type="text/css" href="css/common/reference.css">
+    <link rel="stylesheet" type="text/css" href="css/textCounter/textCounter.css">
+</head>
+
+<body>
+    <h1 id="titleH1"><a href="../index.html" id="title">WEB</a></h1>
+    <div id="rootDiv">
+        <div id="pageListDiv">
+            <ul id="pageList">
+                <li><a href="html_page.html">HTML</a></li>
+                <li><a href="css_page.html">CSS</a></li>
+                <li><a href="javascript_page.html">JavaScript</a></li>
+                <li><a href="box_model_page.html">CSS Box Model</a></li>
+                <li><a href="grid_page.html">Grid</a></li>
+                <li>Calculator
+                    <ul id="calculatorList">
+                        <li><a href="calculator.html">arithmetic operation</a></li>
+                        <li><a href="bmiCalculator.html">BMI Calculator</a></li>
+                        <li><a href="temperature_converter.html">Temperature Converter</a></li>
+                        <li><a href="text_counter.html" id="active">Text Counter</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div id="contentDiv">
+            <h2 id="contentHeader">JavaScript를 이용한 글자 수 세기</h2>
+            <p>
+                Text를 입력하시면, 입력한 글자의 수가 표시됩니다.<br>
+                현재는 엔터와 공백을 모두 포함합니다.
+            </p>
+
+            <div id="counter">
+                <div id="input">
+                    <!--Input-->
+                    <textarea id="inputText" placeholder="Text를 입력하세요."></textarea>
+                </div>
+                <span id="textLength"></span>
+            </div>
+        </div>
+
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <script type="text/javascript" src="javascript/textCounter.js"></script>
+
+        <!--Comment Module (DISQUS)-->
+        <div id="disqus_thread"></div>
+        <script>
+            /**
+            *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+            *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+            /*
+            var disqus_config = function () {
+            this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+            };
+            */
+            (function () { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = 'https://web1-9vpr4sbqwi.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the
+            <a href="https://disqus.com/?ref_noscript">comments powered by
+                Disqus.
+            </a>
+        </noscript>
+
+        <!--Chat Module (Tawk)-->
+        <!--Start of Tawk.to Script-->
+        <script type="text/javascript">
+            var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+            (function () {
+                var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+                s1.async = true;
+                s1.src = 'https://embed.tawk.to/615e7fe725797d7a8902b8cc/1fhci78cp';
+                s1.charset = 'UTF-8';
+                s1.setAttribute('crossorigin', '*');
+                s0.parentNode.insertBefore(s1, s0);
+            })();
+        </script>
+        <!--End of Tawk.to Script-->
+
+</body>
+
+</html>
