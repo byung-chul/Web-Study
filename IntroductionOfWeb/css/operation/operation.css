@@ -1,0 +1,9 @@
+#calculatorGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.gridContent {
+	padding-left: 20px;
+    border: 3px ridge lightgray;
+}

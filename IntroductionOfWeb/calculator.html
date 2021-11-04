@@ -17,6 +17,7 @@
 
     <link rel="stylesheet" type="text/css" href="../index.css">
     <link rel="stylesheet" type="text/css" href="css/common/active.css">
+    <link rel="stylesheet" type="text/css" href="css/operation/operation.css">
 </head>
 
 <body>
@@ -42,11 +43,21 @@
 
         <div id="contentDiv">
             <h2 id="contentHeader">JavaScript를 이용한 계산기</h2>
-            <p>아래의 버튼을 누르면, message창으로 계산을 할 수 있습니다.</p>
-            <p>숫자 두개와 입력할 연산의 종류를 입력하면 원하시는 값을 얻을 수 있습니다.</p>
-            <p>연산 종류 - (+, -, *, /, %)</p>
-            <button id="calculateButton">계산 시작하기</button>
-            <p id="resultParagraph">결과값이 이곳에 표시됩니다.</p>
+            <div id="calculatorGrid">
+                <div id="arithmetic" class="gridContent">
+                    <p>아래의 버튼을 누르면, message창으로 계산을 할 수 있습니다.</p>
+                    <p>숫자 두개와 입력할 연산의 종류를 입력하면 원하시는 값을 얻을 수 있습니다.</p>
+                    <p>연산 종류 - (+, -, *, /, %)</p>
+                    <button id="calculateButton">계산 시작하기</button>
+                    <p id="resultParagraph">결과값이 이곳에 표시됩니다.</p>
+                </div>
+
+                <div id="oddOrEven" class="gridContent">
+                    <p>아래의 버튼을 누르면, message창으로 홀/짝 여부를 확인 할 수 있습니다.</p>
+                    <button id="oddOrEvenButton">확인하기</button>
+                    <p id="resultOddOrEven">결과값이 이곳에 표시됩니다.</p>
+                </div>
+            </div>
         </div>
     </div>
 

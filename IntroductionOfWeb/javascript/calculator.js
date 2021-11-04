@@ -4,7 +4,7 @@ function calculate(firstInput, secondInput, operator) {
 
     var first = Number(firstInput);
     var second = Number(secondInput);
-    
+
     if (operator === '+') {
         result = first + second;
     } else if (operator === '-') {
@@ -31,6 +31,13 @@ function isValidNumberInput(input) {
     } else {
         return true;
     }
+}
+
+//입력한 Input이 숫자인지 아닌지 반환하는 함수
+function isEven(input) {
+    let inputNumber = Number(input);
+
+    return inputNumber % 2 === 0 ? true : false;
 }
 
 //입력한 연산 종류가 적정한지 반환하는 함수
@@ -100,3 +107,31 @@ calculatorInputButton.onclick = function () {
 
     calculate(firstInput, secondInput, operatorInput);
 };
+
+let oddOrEvenButton = document.getElementById("oddOrEvenButton");
+
+oddOrEvenButton.onclick = function () {
+    //숫자 입력 받기
+    var input = prompt("확인 할 숫자 하나를 입력해 주세요.");
+    //prompt 취소 Button check
+    if (input === null) {
+        return;
+    }
+    var isInputValid = isValidNumberInput(input);
+
+    while (!isInputValid) {
+        alert("입력하신 값이 숫자가 아닙니다.\n옳바른 값을 입력해 주세요.");
+        input = prompt("숫자 하나를 입력해 주세요.");
+        isInputValid = isValidNumberInput(input);
+    }
+
+    console.log("Input is = " + input);
+
+    let resultParagraph = document.getElementById("resultOddOrEven")
+    if (isEven(input)) {
+        resultParagraph.innerHTML = "짝수입니다.";
+    } else {
+        resultParagraph.innerHTML = "홀수입니다.";
+    }
+
+}
