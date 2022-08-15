@@ -3,9 +3,10 @@
 * Dreamhack CTF Season 1 Round #2에 출시된 문제
 
 * 문제 Description
-** 할로윈 파티를 기념하기 위해 호박을 준비했습니다! 호박을 10000번 클릭하고 플래그를 획득하세요!
+  * 할로윈 파티를 기념하기 위해 호박을 준비했습니다! 호박을 10000번 클릭하고 플래그를 획득하세요!
 
 # 문제 해결
+* 호박을 10000번 Click 시에 Flag가 나올텐데, 실제로 10000번 Click하는 문제는 확실히 아님
 * html을 열고, Web Browser의 개발자 도구 console에서 javascript를 실행하여 for문 이용하여 해결
 ```javascript
 for(i=0; i<=10000; i++){
