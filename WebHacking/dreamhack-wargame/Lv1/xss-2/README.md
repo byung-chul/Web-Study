@@ -21,7 +21,9 @@
   * param과 cookie를 받아서 http://127.0.0.1:8000/vuln?param={urllib.parse.quote(param)} 를 요청함
 * /memo로 가보면, 누가 Hello라고 되어있는 걸 봐선 누가 접속했었음
   * 그 사람 쿠키를 탈취해야함
+* xss-1과는 다르게, \<script\>가 정상적으로 작동하지 않음
+  * XSS 우회방법으로 svg onload 를 찾아서 이를 이용함
 * /flag 내부로 이동하여 param을 입력
   ```HTML
-  <script>location.href = "/memo?memo=" + document.cookie;</script>
+  <svg onload="location.href = '/memo?memo=' + document.cookie;">
   ```
